@@ -22,7 +22,9 @@ struct EnterView: View {
                     .fontWeight(.semibold)
                     .foregroundColor(.white)
                     .multilineTextAlignment(.leading)
-
+  
+                
+                
                 Spacer()
 
                 NavigationLink(destination: RefistationView().navigationBarBackButtonHidden(true), tag: 1, selection: $onboardingState) {
