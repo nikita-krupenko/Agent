@@ -8,7 +8,7 @@ struct Profession: Identifiable, Hashable {
 struct WorkView: View {
     @State private var selectedProfessions: Set<Profession> = []
     @Binding var kindOfWork: String 
-       
+    @Binding var isFullScreen: Bool
     @State private var professions = [
         Profession(name: "Парикмахерские услуги"),
         Profession(name: "Ногтевой сервис"),
@@ -30,64 +30,75 @@ struct WorkView: View {
     @State private var isAddingProfession = false
 
     var body: some View {
-        VStack {
-            List {
-              
-                    ForEach(professions, id: \.id) { profession in
-                        HStack {
-                            Text(profession.name)
-                            Spacer()
-                            if selectedProfessions.contains(profession) {
-                                Image(systemName: "checkmark")
+        NavigationView {
+            VStack {
+                List {
+                  
+                        ForEach(professions, id: \.id) { profession in
+                            HStack {
+                                Text(profession.name)
+                                Spacer()
+                                if selectedProfessions.contains(profession) {
+                                    Image(systemName: "checkmark")
+                                }
+                            }
+                         
+                            .onTapGesture {
+                                
+                                toggleProfession(profession)
+                                kindOfWork = selectedProfessions.map { $0.name }.joined(separator: ", ")
                             }
                         }
-                     
-                        .onTapGesture {
-                            
-                            toggleProfession(profession)
-                            kindOfWork = selectedProfessions.map { $0.name }.joined(separator: ", ")
-                        }
-                    }
-                
+                    
 
-                
-                    Button(action: {
-                        isAddingProfession.toggle()
-                    }) {
-                        Text("Добавить новую специализацию")
-                    }
-
-                    if isAddingProfession {
-                        TextField("Enter a new profession", text: $newProfession)
-                            .padding()
-
+                    
                         Button(action: {
-                            if !newProfession.isEmpty {
-                                let profession = Profession(name: newProfession)
-                                professions.append(profession)
-                                newProfession = ""
-                                isAddingProfession.toggle()
-                            }
+                            isAddingProfession.toggle()
                         }) {
-                            Text("Add Profession")
-                                .padding()
-                                .background(Color.blue)
-                                .foregroundColor(.white)
-                                .cornerRadius(10)
+                            Text("Добавить новую специализацию")
                         }
-                        .padding()
-                    }
-                
 
-//                Section(header: Text("Selected Professions")) {
-//                    Text(selectedProfessions.map { $0.name }.joined(separator: ", "))
-//                        .padding()
-//                }
-            }
-           
+                        if isAddingProfession {
+                            TextField("Enter a new profession", text: $newProfession)
+                                .padding()
+
+                            Button(action: {
+                                if !newProfession.isEmpty {
+                                    let profession = Profession(name: newProfession)
+                                    professions.append(profession)
+                                    newProfession = ""
+                                    isAddingProfession.toggle()
+                                }
+                            }) {
+                                Text("Add Profession")
+                                    .padding()
+                                    .background(Color.blue)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(10)
+                            }
+                            .padding()
+                        }
+                    
+
+    //                Section(header: Text("Selected Professions")) {
+    //                    Text(selectedProfessions.map { $0.name }.joined(separator: ", "))
+    //                        .padding()
+    //                }
+                }
+               
+            }.navigationBarTitle("Выбор специализации", displayMode: .inline)
+                .navigationBarItems(leading: Button(action: {
+                    // Handle back button action here
+                    isFullScreen = false
+                }) {
+                    Image(systemName: "arrow.left")
+                    Text("Назад")
+                })
+        }
         }
         
-    }
+    
+
 
       func toggleProfession(_ profession: Profession) {
         if selectedProfessions.contains(profession) {
@@ -103,8 +114,9 @@ struct WorkView: View {
 
 struct WorkView_Previews: PreviewProvider {
     @State static var kindOfWork: String = "Initial Kind of Work"
+    @State var isFullScreen: Bool = false
 
     static var previews: some View {
-        WorkView(kindOfWork: $kindOfWork)
+        WorkView(kindOfWork: $kindOfWork, isFullScreen:  .constant(false))
     }
 }

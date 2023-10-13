@@ -14,7 +14,7 @@ struct RefistationView: View {
     @State private var instagram: String = ""
     @State private var telegram: String = ""
     //@State var dataPicker: Bool = false
-    
+    @Binding var kindOfWork: String
 
     @State  var isDatePickerVisible: Bool = false
 
@@ -26,6 +26,8 @@ struct RefistationView: View {
             
             ScrollView {
                 VStack(alignment: .leading, spacing: 0){
+                    
+                    ProfileView()
                     FFIO(textName: $name, titleName: "Имя")
                         .onTapGesture {
                                             isDatePickerVisible = false
@@ -44,9 +46,8 @@ struct RefistationView: View {
                     SelectDate(isDatePickerVisible: $isDatePickerVisible)
                       
                     SelectWork()
-                        .onTapGesture {
-                                            isDatePickerVisible = false
-                                        }
+                        .onChange(of: kindOfWork) { _ in
+                            isDatePickerVisible = false}
                     FFIO(textName: $email, titleName: "Электронная почта")
                     Text("Электоронная почта нужна для восстановления аккаунта вашего аккаунта,в случае забытия пароля или логина")
                         .font(.subheadline)
@@ -69,8 +70,9 @@ struct RefistationView: View {
 }
 
 struct RefistationView_Previews: PreviewProvider {
+   
     static var previews: some View {
-        RefistationView()
+        RefistationView(kindOfWork: .constant(""))
     }
 }
 
@@ -134,9 +136,9 @@ struct SelectDate: View {
             }
             .padding(.bottom, -12.5)
 
-            Rectangle()
-                .frame(height: 0.1)
-                .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.848))
+//            Rectangle()
+//                .frame(height: 0.1)
+//                .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.848))
 
             Divider()
 
@@ -155,6 +157,7 @@ struct SelectDate: View {
                         self.isDateSelected = true
                     }
             }
+            
         }
         .frame(height: isDatePickerVisible ? 250 : 0)
         .padding(.top, 20)
@@ -167,22 +170,113 @@ struct SelectDate: View {
 struct SelectWork: View{
     @State var kindOfWork: String = "Специализация"
     @State  var isDatePickerVisible: Bool = false
+    @State private var isKindOfWorkChanged: Bool = false
+    @State var isFullScreen: Bool = false
+     
     var body: some View{
-        VStack {
-            HStack(spacing: 0) {
-                NavigationLink(kindOfWork, destination: WorkView(kindOfWork: $kindOfWork))
-                    .onTapGesture {
-                                        isDatePickerVisible = false
-                                    }
-                   
-                    .padding(.top,45)
-                    .fontWeight(.medium)
-                    .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.748))
+        VStack(alignment: .trailing, spacing: 0) {
+                            Button {
+                    toggleButtonPressed()
+                } label: {
+                    if isKindOfWorkChanged{
+                        VStack(alignment: .leading) {
+                            Text("Cпециализация")
+                                .font(.subheadline)
+                            .foregroundColor(.gray)
+                            Text(kindOfWork)
+                                .padding(.bottom, -3.5)
+                                .fontWeight(.medium)
+                                .foregroundColor(.black)
+                                .multilineTextAlignment(.leading)
+                            
+                            Divider()
+                        }
+                    }else{
+                        VStack(alignment: .leading) {
+                            Text(" ")
+                                .font(.subheadline)
+                            .foregroundColor(.gray)
+                            Text(kindOfWork)
+                                .padding(.bottom, -3.5)
+                                .fontWeight(.medium)
+                                .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.748))
+                                .multilineTextAlignment(.leading)
+                               
+                            Divider()
+                             Spacer()
+                        }
+                        
+                    }
+                  
+            
+            } .padding(.top,25)
+              //  .padding(.leading,-24)
+//            Rectangle()
+//                .frame(height: 0.1)
+//                .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.848))
+//                Spacer()
                 
-                Spacer()
-                
-            }
+            
         }
-        
+        .fullScreenCover(isPresented: $isFullScreen) {
+            WorkView(kindOfWork: $kindOfWork, isFullScreen: $isFullScreen)
+                
+        }
+        .onChange(of: kindOfWork) { newValue in
+            isKindOfWorkChanged = true
+        }
+    }
+    func toggleButtonPressed(){
+        isFullScreen.toggle()
+    }
+}
+
+
+struct ProfileView: View {
+    
+    @State var changeProfileImage = false
+    @State var openCameraRoll = false
+    @State var imageSelected = UIImage()
+    
+    var body: some View {
+        HStack {
+            ZStack(alignment: .bottomTrailing) {
+                Button(action: {
+                    changeProfileImage = true
+                    openCameraRoll = true
+                    
+                }, label: {
+                    if changeProfileImage {
+                        Image(uiImage: imageSelected)
+                            .profileImageMod()
+                    } else {
+                        
+                        HStack {
+                         
+                            Image(systemName: "person.circle")
+
+                                .profileImageMod()
+                            .foregroundColor(.black)
+                          
+                        }
+                    }
+            })
+                
+                Image(systemName: "plus")
+                    .frame(width: 30, height: 30)
+                    .foregroundColor(.white)
+                    .background(Color.gray)
+                    .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                
+            }.sheet(isPresented: $openCameraRoll) {
+                ImagePicker(selectedImage: $imageSelected, sourceType: .photoLibrary)
+        }
+            if changeProfileImage {
+                Text("Изменить фото")
+            } else {
+                Text("Добавить фото")
+            }
+          
+        }
     }
 }

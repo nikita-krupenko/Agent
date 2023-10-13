@@ -16,6 +16,8 @@
 		74B732352ACD6C860085C8D5 /* RefistationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B732342ACD6C860085C8D5 /* RefistationView.swift */; };
 		74CF514D2ACDB37700B0F8C5 /* er.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CF514C2ACDB37700B0F8C5 /* er.swift */; };
 		74CF514F2ACF3C4400B0F8C5 /* WorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CF514E2ACF3C4400B0F8C5 /* WorkView.swift */; };
+		74E62FCA2AD7E2B100E1C846 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E62FC92AD7E2B100E1C846 /* ImagePicker.swift */; };
+		74E62FCC2AD7E2E000E1C846 /* ProfileImageMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E62FCB2AD7E2E000E1C846 /* ProfileImageMod.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		74B732342ACD6C860085C8D5 /* RefistationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefistationView.swift; sourceTree = "<group>"; };
 		74CF514C2ACDB37700B0F8C5 /* er.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = er.swift; sourceTree = "<group>"; };
 		74CF514E2ACF3C4400B0F8C5 /* WorkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkView.swift; sourceTree = "<group>"; };
+		74E62FC92AD7E2B100E1C846 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		74E62FCB2AD7E2E000E1C846 /* ProfileImageMod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageMod.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,8 @@
 				74CF514C2ACDB37700B0F8C5 /* er.swift */,
 				74CF514E2ACF3C4400B0F8C5 /* WorkView.swift */,
 				744EF3282AD55B2C00CDA522 /* ee.swift */,
+				74E62FC92AD7E2B100E1C846 /* ImagePicker.swift */,
+				74E62FCB2AD7E2E000E1C846 /* ProfileImageMod.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -178,9 +184,11 @@
 			files = (
 				748E5A382ACD5C16007C2BB8 /* AgentApp.swift in Sources */,
 				74CF514F2ACF3C4400B0F8C5 /* WorkView.swift in Sources */,
+				74E62FCC2AD7E2E000E1C846 /* ProfileImageMod.swift in Sources */,
 				744EF3292AD55B2C00CDA522 /* ee.swift in Sources */,
 				748E5A492ACD5DB8007C2BB8 /* MainView.swift in Sources */,
 				74CF514D2ACDB37700B0F8C5 /* er.swift in Sources */,
+				74E62FCA2AD7E2B100E1C846 /* ImagePicker.swift in Sources */,
 				74B732332ACD694D0085C8D5 /* EnterView.swift in Sources */,
 				74B732352ACD6C860085C8D5 /* RefistationView.swift in Sources */,
 			);

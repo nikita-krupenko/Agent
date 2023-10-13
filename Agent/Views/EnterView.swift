@@ -27,7 +27,7 @@ struct EnterView: View {
                 
                 Spacer()
 
-                NavigationLink(destination: RefistationView().navigationBarBackButtonHidden(true), tag: 1, selection: $onboardingState) {
+                NavigationLink(destination: RefistationView(kindOfWork: .constant("")).navigationBarBackButtonHidden(true), tag: 1, selection: $onboardingState) {
                     bottomRegistration
                 }
 
