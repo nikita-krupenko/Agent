@@ -9,6 +9,7 @@ struct WorkView: View {
     @State private var selectedProfessions: Set<Profession> = []
     @Binding var kindOfWork: String 
     @Binding var isFullScreen: Bool
+    @Binding  var isDatePickerVisible: Bool
     @State private var professions = [
         Profession(name: "Парикмахерские услуги"),
         Profession(name: "Ногтевой сервис"),
@@ -90,6 +91,7 @@ struct WorkView: View {
                 .navigationBarItems(leading: Button(action: {
                     // Handle back button action here
                     isFullScreen = false
+                    isDatePickerVisible = false
                 }) {
                     Image(systemName: "arrow.left")
                     Text("Назад")
@@ -117,6 +119,6 @@ struct WorkView_Previews: PreviewProvider {
     @State var isFullScreen: Bool = false
 
     static var previews: some View {
-        WorkView(kindOfWork: $kindOfWork, isFullScreen:  .constant(false))
+        WorkView(kindOfWork: $kindOfWork, isFullScreen:  .constant(false), isDatePickerVisible: .constant(false))
     }
 }

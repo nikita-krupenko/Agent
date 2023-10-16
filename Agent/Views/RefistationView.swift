@@ -48,6 +48,9 @@ struct RefistationView: View {
                     SelectWork()
                         .onChange(of: kindOfWork) { _ in
                             isDatePickerVisible = false}
+                        .onTapGesture {
+                                            isDatePickerVisible = false
+                                        }
                     FFIO(textName: $email, titleName: "Электронная почта")
                     Text("Электоронная почта нужна для восстановления аккаунта вашего аккаунта,в случае забытия пароля или логина")
                         .font(.subheadline)
@@ -177,9 +180,10 @@ struct SelectWork: View{
         VStack(alignment: .trailing, spacing: 0) {
                             Button {
                     toggleButtonPressed()
+                                isDatePickerVisible = false
                 } label: {
                     if isKindOfWorkChanged{
-                        VStack(alignment: .leading) {
+                          VStack(alignment: .leading) {
                             Text("Cпециализация")
                                 .font(.subheadline)
                             .foregroundColor(.gray)
@@ -219,15 +223,20 @@ struct SelectWork: View{
             
         }
         .fullScreenCover(isPresented: $isFullScreen) {
-            WorkView(kindOfWork: $kindOfWork, isFullScreen: $isFullScreen)
+            WorkView(kindOfWork: $kindOfWork, isFullScreen: $isFullScreen, isDatePickerVisible: .constant(false))
                 
         }
         .onChange(of: kindOfWork) { newValue in
             isKindOfWorkChanged = true
+            isDatePickerVisible = false
+        }
+        .onTapGesture {
+            isDatePickerVisible = false
         }
     }
     func toggleButtonPressed(){
         isFullScreen.toggle()
+        isDatePickerVisible = false
     }
 }
 
