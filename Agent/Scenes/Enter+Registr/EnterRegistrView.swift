@@ -3,28 +3,24 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView {
-            EnterView()
+            EnterRegistrView()
         }
     }
 }
-
-struct EnterView: View {
+struct EnterRegistrView: View {
     @State private var onboardingState: Int? = nil
-
     var body: some View {
         ZStack {
             RadialGradient(gradient: Gradient(colors: [Color.blue, Color.purple]), center: .topLeading, startRadius: 5, endRadius: UIScreen.main.bounds.height)
                 .ignoresSafeArea(.all)
-
+            
             VStack(spacing: 10) {
                 Text("Начни работу прямо сейчас")
                     .font(.largeTitle)
                     .fontWeight(.semibold)
                     .foregroundColor(.white)
                     .multilineTextAlignment(.leading)
-  
-                
-                
+
                 Spacer()
 
                 NavigationLink(destination: RefistationView(kindOfWork: .constant("")).navigationBarBackButtonHidden(true), tag: 1, selection: $onboardingState) {
@@ -40,16 +36,6 @@ struct EnterView: View {
     }
 }
 
-struct RegistrationView: View {
-    var body: some View {
-        VStack {
-            Text("Это экран регистрации")
-                .padding()
-            Spacer()
-        }
-    }
-}
-
 struct LoginView: View {
     var body: some View {
         Text("Это экран входа")
@@ -57,28 +43,18 @@ struct LoginView: View {
     }
 }
 
-extension EnterView {
+extension EnterRegistrView {
     private var bottomRegistration: some View {
         Text("Регистрация")
-            .font(.headline)
-            .foregroundColor(.purple)
-            .frame(height: 55)
-            .frame(maxWidth: .infinity)
-            .background(Color.white)
-            .cornerRadius(10)
             .onTapGesture {
                 onboardingState = 1
             }
+            .textButton()
     }
 
     private var bottomEnter: some View {
         Text("Войти")
-            .font(.headline)
-            .foregroundColor(.purple)
-            .frame(height: 55)
-            .frame(maxWidth: .infinity)
-            .background(Color.white)
-            .cornerRadius(10)
+            .textButton()
             .onTapGesture {
                 onboardingState = 2
             }

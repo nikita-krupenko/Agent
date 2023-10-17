@@ -84,7 +84,6 @@ struct FFIO:View{
     @State var titleName: String
 //    @State private var isDatePickerVisible = false
     var body: some View{
-       
         VStack(alignment: .leading, spacing: 0) {
             if textName.isEmpty{
                 Text(" ")
@@ -100,8 +99,9 @@ struct FFIO:View{
 
                 
             Rectangle()
-                .frame(height: 0.5)
-                .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.848))
+                .rectangleColor()
+//                .frame(height: 0.5)
+//                .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.848))
             
             
            
@@ -214,11 +214,7 @@ struct SelectWork: View{
                   
             
             } .padding(.top,25)
-              //  .padding(.leading,-24)
-//            Rectangle()
-//                .frame(height: 0.1)
-//                .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.848))
-//                Spacer()
+
                 
             
         }
@@ -228,15 +224,12 @@ struct SelectWork: View{
         }
         .onChange(of: kindOfWork) { newValue in
             isKindOfWorkChanged = true
-            isDatePickerVisible = false
         }
-        .onTapGesture {
-            isDatePickerVisible = false
-        }
+      
     }
     func toggleButtonPressed(){
         isFullScreen.toggle()
-        isDatePickerVisible = false
+        
     }
 }
 

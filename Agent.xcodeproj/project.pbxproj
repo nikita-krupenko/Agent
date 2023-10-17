@@ -7,29 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		744EF3292AD55B2C00CDA522 /* ee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744EF3282AD55B2C00CDA522 /* ee.swift */; };
+		746B0C102ADE9DDE00AF521C /* EnterRegistrModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B0C0F2ADE9DDE00AF521C /* EnterRegistrModel.swift */; };
+		746B0C122ADE9DF000AF521C /* EnterRegistrViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B0C112ADE9DF000AF521C /* EnterRegistrViewModel.swift */; };
+		746B0C152ADEA56F00AF521C /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B0C142ADEA56F00AF521C /* TextButton.swift */; };
+		746B0C172ADEB95300AF521C /* RectangleColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B0C162ADEB95300AF521C /* RectangleColor.swift */; };
 		748E5A382ACD5C16007C2BB8 /* AgentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748E5A372ACD5C16007C2BB8 /* AgentApp.swift */; };
 		748E5A3C2ACD5C17007C2BB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 748E5A3B2ACD5C17007C2BB8 /* Assets.xcassets */; };
 		748E5A3F2ACD5C17007C2BB8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 748E5A3E2ACD5C17007C2BB8 /* Preview Assets.xcassets */; };
 		748E5A492ACD5DB8007C2BB8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748E5A482ACD5DB8007C2BB8 /* MainView.swift */; };
-		74B732332ACD694D0085C8D5 /* EnterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B732322ACD694D0085C8D5 /* EnterView.swift */; };
+		74B732332ACD694D0085C8D5 /* EnterRegistrView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B732322ACD694D0085C8D5 /* EnterRegistrView.swift */; };
 		74B732352ACD6C860085C8D5 /* RefistationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B732342ACD6C860085C8D5 /* RefistationView.swift */; };
-		74CF514D2ACDB37700B0F8C5 /* er.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CF514C2ACDB37700B0F8C5 /* er.swift */; };
 		74CF514F2ACF3C4400B0F8C5 /* WorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CF514E2ACF3C4400B0F8C5 /* WorkView.swift */; };
 		74E62FCA2AD7E2B100E1C846 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E62FC92AD7E2B100E1C846 /* ImagePicker.swift */; };
 		74E62FCC2AD7E2E000E1C846 /* ProfileImageMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E62FCB2AD7E2E000E1C846 /* ProfileImageMod.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		744EF3282AD55B2C00CDA522 /* ee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ee.swift; sourceTree = "<group>"; };
+		746B0C0F2ADE9DDE00AF521C /* EnterRegistrModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterRegistrModel.swift; sourceTree = "<group>"; };
+		746B0C112ADE9DF000AF521C /* EnterRegistrViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterRegistrViewModel.swift; sourceTree = "<group>"; };
+		746B0C142ADEA56F00AF521C /* TextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButton.swift; sourceTree = "<group>"; };
+		746B0C162ADEB95300AF521C /* RectangleColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleColor.swift; sourceTree = "<group>"; };
 		748E5A342ACD5C16007C2BB8 /* Agent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Agent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		748E5A372ACD5C16007C2BB8 /* AgentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentApp.swift; sourceTree = "<group>"; };
 		748E5A3B2ACD5C17007C2BB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		748E5A3E2ACD5C17007C2BB8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		748E5A482ACD5DB8007C2BB8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		74B732322ACD694D0085C8D5 /* EnterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterView.swift; sourceTree = "<group>"; };
+		74B732322ACD694D0085C8D5 /* EnterRegistrView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterRegistrView.swift; sourceTree = "<group>"; };
 		74B732342ACD6C860085C8D5 /* RefistationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefistationView.swift; sourceTree = "<group>"; };
-		74CF514C2ACDB37700B0F8C5 /* er.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = er.swift; sourceTree = "<group>"; };
 		74CF514E2ACF3C4400B0F8C5 /* WorkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkView.swift; sourceTree = "<group>"; };
 		74E62FC92AD7E2B100E1C846 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		74E62FCB2AD7E2E000E1C846 /* ProfileImageMod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageMod.swift; sourceTree = "<group>"; };
@@ -46,6 +50,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		746B0C0D2ADE9D3700AF521C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				746B0C0E2ADE9D3F00AF521C /* Enter+Registr */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		746B0C0E2ADE9D3F00AF521C /* Enter+Registr */ = {
+			isa = PBXGroup;
+			children = (
+				74B732322ACD694D0085C8D5 /* EnterRegistrView.swift */,
+				746B0C0F2ADE9DDE00AF521C /* EnterRegistrModel.swift */,
+				746B0C112ADE9DF000AF521C /* EnterRegistrViewModel.swift */,
+			);
+			path = "Enter+Registr";
+			sourceTree = "<group>";
+		};
+		746B0C132ADEA54000AF521C /* ViewModifiers  */ = {
+			isa = PBXGroup;
+			children = (
+				746B0C142ADEA56F00AF521C /* TextButton.swift */,
+				746B0C162ADEB95300AF521C /* RectangleColor.swift */,
+			);
+			path = "ViewModifiers ";
+			sourceTree = "<group>";
+		};
 		748E5A2B2ACD5C16007C2BB8 = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +96,8 @@
 		748E5A362ACD5C16007C2BB8 /* Agent */ = {
 			isa = PBXGroup;
 			children = (
+				746B0C132ADEA54000AF521C /* ViewModifiers  */,
+				746B0C0D2ADE9D3700AF521C /* Scenes */,
 				748E5A372ACD5C16007C2BB8 /* AgentApp.swift */,
 				748E5A452ACD5C4E007C2BB8 /* Models */,
 				748E5A472ACD5C66007C2BB8 /* ViewMOdel */,
@@ -94,11 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				748E5A482ACD5DB8007C2BB8 /* MainView.swift */,
-				74B732322ACD694D0085C8D5 /* EnterView.swift */,
 				74B732342ACD6C860085C8D5 /* RefistationView.swift */,
-				74CF514C2ACDB37700B0F8C5 /* er.swift */,
 				74CF514E2ACF3C4400B0F8C5 /* WorkView.swift */,
-				744EF3282AD55B2C00CDA522 /* ee.swift */,
 				74E62FC92AD7E2B100E1C846 /* ImagePicker.swift */,
 				74E62FCB2AD7E2E000E1C846 /* ProfileImageMod.swift */,
 			);
@@ -182,15 +212,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				746B0C152ADEA56F00AF521C /* TextButton.swift in Sources */,
 				748E5A382ACD5C16007C2BB8 /* AgentApp.swift in Sources */,
 				74CF514F2ACF3C4400B0F8C5 /* WorkView.swift in Sources */,
+				746B0C172ADEB95300AF521C /* RectangleColor.swift in Sources */,
 				74E62FCC2AD7E2E000E1C846 /* ProfileImageMod.swift in Sources */,
-				744EF3292AD55B2C00CDA522 /* ee.swift in Sources */,
 				748E5A492ACD5DB8007C2BB8 /* MainView.swift in Sources */,
-				74CF514D2ACDB37700B0F8C5 /* er.swift in Sources */,
+				746B0C122ADE9DF000AF521C /* EnterRegistrViewModel.swift in Sources */,
 				74E62FCA2AD7E2B100E1C846 /* ImagePicker.swift in Sources */,
-				74B732332ACD694D0085C8D5 /* EnterView.swift in Sources */,
+				74B732332ACD694D0085C8D5 /* EnterRegistrView.swift in Sources */,
 				74B732352ACD6C860085C8D5 /* RefistationView.swift in Sources */,
+				746B0C102ADE9DDE00AF521C /* EnterRegistrModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

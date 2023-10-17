@@ -16,9 +16,9 @@ struct MainView: View {
             ZStack{
                 switch ondobordingState{
                 case 0 :
-                 EnterView()
+                 EnterRegistrView()
                 case 1 :
-                 EnterView()
+                 EnterRegistrView()
                 default:
                     RoundedRectangle(cornerRadius: 4.0)
                 }
