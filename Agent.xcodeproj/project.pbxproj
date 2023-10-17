@@ -20,6 +20,7 @@
 		74CF514F2ACF3C4400B0F8C5 /* WorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CF514E2ACF3C4400B0F8C5 /* WorkView.swift */; };
 		74E62FCA2AD7E2B100E1C846 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E62FC92AD7E2B100E1C846 /* ImagePicker.swift */; };
 		74E62FCC2AD7E2E000E1C846 /* ProfileImageMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E62FCB2AD7E2E000E1C846 /* ProfileImageMod.swift */; };
+		74EC698C2ADEFC7E00E1B900 /* AddNewWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EC698B2ADEFC7E00E1B900 /* AddNewWork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		74CF514E2ACF3C4400B0F8C5 /* WorkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkView.swift; sourceTree = "<group>"; };
 		74E62FC92AD7E2B100E1C846 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		74E62FCB2AD7E2E000E1C846 /* ProfileImageMod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageMod.swift; sourceTree = "<group>"; };
+		74EC698B2ADEFC7E00E1B900 /* AddNewWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewWork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,10 +129,11 @@
 			isa = PBXGroup;
 			children = (
 				748E5A482ACD5DB8007C2BB8 /* MainView.swift */,
-				74B732342ACD6C860085C8D5 /* RefistationView.swift */,
-				74CF514E2ACF3C4400B0F8C5 /* WorkView.swift */,
 				74E62FC92AD7E2B100E1C846 /* ImagePicker.swift */,
 				74E62FCB2AD7E2E000E1C846 /* ProfileImageMod.swift */,
+				74B732342ACD6C860085C8D5 /* RefistationView.swift */,
+				74CF514E2ACF3C4400B0F8C5 /* WorkView.swift */,
+				74EC698B2ADEFC7E00E1B900 /* AddNewWork.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				746B0C122ADE9DF000AF521C /* EnterRegistrViewModel.swift in Sources */,
 				74E62FCA2AD7E2B100E1C846 /* ImagePicker.swift in Sources */,
 				74B732332ACD694D0085C8D5 /* EnterRegistrView.swift in Sources */,
+				74EC698C2ADEFC7E00E1B900 /* AddNewWork.swift in Sources */,
 				74B732352ACD6C860085C8D5 /* RefistationView.swift in Sources */,
 				746B0C102ADE9DDE00AF521C /* EnterRegistrModel.swift in Sources */,
 			);
